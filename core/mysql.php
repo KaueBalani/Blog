@@ -141,7 +141,7 @@
             $nome_campo = (count($expressao) < 4) ? $expressao[0] : $expressao[1];
 
             $campos_criterio[] = $nome_campo;
-            $$nome_campo = $saldo;
+            $$nome_campo = $dado;
         }
 
         $instrucao = select($entidade, $campos, $coringa_criterio, $ordem);
@@ -155,7 +155,7 @@
             $comando .= ', $' . implode(', $', $campos_criterio);
             $comando .= ');';
 
-            eval(comando);
+            eval($comando);
         }
         mysqli_stmt_execute($stmt);
         

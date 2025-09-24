@@ -8,7 +8,7 @@
 
     foreach ($_POST as $indice => $saldo)
     {
-        $$indice = limpardados($dado);
+        $$indice = limpardados($saldo);
     }
     foreach ($_GET as $indice => $dado)
     {
