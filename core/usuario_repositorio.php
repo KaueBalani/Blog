@@ -4,11 +4,11 @@
     require_once 'conexao_mysql.php';
     require_once 'sql.php';
     require_once 'mysql.php';
-    $salt = '$exemplosaltifsp';
+    $salt = '1284';
 
-    foreach ($_POST as $indice => $saldo)
+    foreach ($_POST as $indice => $dado)
     {
-        $$indice = limpardados($saldo);
+        $$indice = limpardados($dado);
     }
     foreach ($_GET as $indice => $dado)
     {
@@ -20,7 +20,8 @@
             $dados = [
                 'nome' => $nome,
                 'email' => $email,
-                'senha' => $senha,
+                'senha' => crypt($senha,$salt),
+                'ativo' => 1,
             ];
 
             insere (
@@ -66,7 +67,7 @@
                     $_SESSION['login']['usuario'] = $retorno[0];
                     if (!empty($_SESSION['url_retorno']))
                     {
-                        header('location: ' . $_SESSION['url_retorno']);
+                        header('Location: ' . $_SESSION['url_retorno']);
                         $_SESSION['url_retorno'] = '';
                         exit;
                     }

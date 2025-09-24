@@ -11,10 +11,10 @@
     ?>
     <div class="card-body text-right">
             Olá <?php echo $_SESSION['login']['usuario']['nome'] ?>!
+            <a href="core/usuario_repositorio.php?acao=logout"
+                class="btn btn-link btn-sm" role="button">Sair</a>
     </div>
-    <a href="core/usuario_repositorio.php?acao=logout"
-        class="btn btn-link btn-sm" role="button">Sair</a>
+    <?php
+        endif
+    ?>
 </div>
-<?php
-    endif
-?>
