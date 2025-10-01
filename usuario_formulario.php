@@ -37,18 +37,18 @@
                         <input type="hidden" name="id" value="<?php echo $entidade['id'] ?? '' ?>">
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input class="form-control" type="text" require="required"
+                            <input class="form-control" type="text" required="required"
                             id="nome" name="nome" value="<?php echo $entidade['nome'] ?? '' ?>">
                         </div>
                         <div class="form-group">
                             <label for="email">E-mail</label>
-                            <input class="form-control" type="text" require="required"
+                            <input class="form-control" type="text" required="required"
                             id="email" name="email" value="<?php echo $entidade['email'] ?? '' ?>">
                         </div>
                         <?php if (!isset($_SESSION['login'])): ?>
                         <div class="form-group">
                             <label for="senha">Senha</label>
-                            <input class="form-control" type="password" require="required"
+                            <input class="form-control" type="password" required="required"
                             id="senha" name="senha">
 
                         </div>

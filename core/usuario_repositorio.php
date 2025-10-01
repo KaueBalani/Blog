@@ -21,7 +21,7 @@
                 'nome' => $nome,
                 'email' => $email,
                 'senha' => crypt($senha,$salt),
-                'ativo' => 1,
+                'ativo' => 0,
             ];
 
             insere (
@@ -83,13 +83,14 @@
             $valor = (int)$valor;
 
             $dados = [
-                'ativo' => $ativo
+                'ativo' => $valor
             ];
 
             $criterio = [
                 ['id', '=', $id]
             ];
-            $atualiza(
+
+            atualiza(
                 'usuario',
                 $dados,
                 $criterio
