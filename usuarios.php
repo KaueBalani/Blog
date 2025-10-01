@@ -44,7 +44,7 @@
                 $criterio[] = [
                     'nome',
                     'like',
-                    "%{$busca}%"
+                    "%{$busca}%",
                 ];
             }
 

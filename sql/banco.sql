@@ -26,6 +26,4 @@ create table post(
     constraint fk_post_usuario foreign key (usuario_id) references usuario(id)
 );
 
-select * from usuario;
-
-update usuario set ativo=false where id=1;
+select * from usuario

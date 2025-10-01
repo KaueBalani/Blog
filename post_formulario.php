@@ -56,10 +56,10 @@
                         <div class="form-group">
                             <label for="texto">Texto</label>
                             <textarea class="form-control" type="text" require="required" id="texto" name="texto" 
-                            rows="5"> <?php echo $entidade['texto'] ?? '' ?>" </textarea>
+                            rows="5"> <?php echo $entidade['texto'] ?? '' ?> </textarea>
                         </div>
                         <div class="form-group">
-                            <label for="texto">Postar em</label>
+                            <label for="">Postar em</label>
                             <?php
                                 $data = (!empty($entidade['data_postagem']))?
                                     explode(' ', $entidade['data_postagem'])[0] : '';
